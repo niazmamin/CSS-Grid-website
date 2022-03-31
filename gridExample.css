@@ -1,0 +1,162 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+  font-family: 'Bree Serif', serif;
+  background: #00000024;
+}
+/* ############### Navigation ############### */
+.wrapper{
+  margin: 20px 80px;
+  display: grid;
+}
+
+.wrapper > ul{
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}
+
+.wrapper >ul > li > a{
+  display: block;
+  text-decoration: none;
+  background: #eee;
+  text-align: center;
+  padding: 10px;
+  text-transform: uppercase;
+  box-shadow: 0px 0px 10px #00000085;
+  color: #000000ab;
+  transition: 0.5s;
+}
+
+.wrapper >ul > li > a:hover{
+  background: #000000ab;
+  color: #eee;
+}
+
+.gap{
+  margin-top: 50px;
+}
+
+/* ############### background image ############### */
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    'img img box-a'
+    'img img box-b';
+  grid-gap: 35px;
+
+  text-align: justify;
+  letter-spacing: 1px;
+  word-spacing: 7px;
+  line-height: 32px;
+  text-indent: 34px;
+}
+
+.img{
+  grid-area: img;
+  background: url(bike.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 484px;
+}
+
+.img > h1{
+  color: #f9ff00;
+  text-transform: uppercase;
+  letter-spacing: 9px;
+  font-size: 44px;
+  text-align: center;
+  margin-top: 220px;
+}
+
+.box-a{
+  grid-area: box-a;
+}
+
+.box-b{
+  grid-area: box-b;
+}
+.box-a , .box-b{
+  background: #eee;
+  padding: 10px;
+  box-shadow: 0px 0px 10px #00000085;
+}
+
+/* ############### Image in html ############### */
+
+img{
+  max-width: 100%;
+}
+
+.info{
+  background: #eee;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  padding: 30px;
+  box-shadow: 0px 0px 10px #00000085;
+}
+
+.info-desc > h1,p{
+
+}
+
+.info-desc > h1{
+  font-size: 29px;
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.info-desc > p{
+  text-align: justify;
+  letter-spacing: 1px;
+  word-spacing: 7px;
+  line-height: 32px;
+  text-indent: 34px;
+}
+
+
+/* ############### footerl ############### */
+
+footer{
+  display: grid;
+  background: #000000c9;
+  grid-template-columns: 1fr;
+  color: #f6f7f6d1;
+  padding: 20px;
+  text-align: center;
+  font-size: 15px;
+}
+
+
+/* ############### Media Queries ############### */
+
+@media (max-width: 700px){
+
+.wrapper > ul{
+  grid-template-columns: 1fr;
+}
+
+.container{
+  grid-template-areas:
+    'img img img img'
+    'box-a box-a box-b box-b';
+
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+}
+
+.info{
+  grid-template-columns: 1fr;
+}
+
+}
